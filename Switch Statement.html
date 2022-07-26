@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Switch</title>
+    <style>
+        body{
+            background-color: azure;
+        }
+        button{
+            color:black;
+            padding: 1px;
+            border-radius: 2px;
+        }
+        h1,p{
+            font-style: italic;
+            color: blueviolet;
+        }
+    </style>
+</head>
+<body>
+    <h1>Meals of the week</h1>
+    <p>Click  the button to know meals of the day</p>
+    <button onclick="myFuction()">Try it</button>
+    <p id="demo"></p>
+    <script>
+        function myFuction(){
+            let meal;
+            let day=prompt("Enter the day","Monday");
+        
+        switch(day){
+            case "Monday":
+               meal="Today's menu is gujarati";
+                break;
+                case "Tuesday":
+                    meal="Today's menu is punjabi";
+                    break;
+                    case "Wednesday":
+                    meal="Today's menu is South indian";
+                    break;
+                    case "Thursday":
+                    meal="Today's menu is Rajsthani";
+                    break;
+                    case "Friday":
+                    meal="Today's menu is Kashmiri";
+                    break;
+                    case "Saturday":
+                    meal="Today's meal is mexican";
+                    break;
+                default:
+                    meal="There is no menu today";
+                }
+                document.getElementById("demo").innerHTML=meal;
+            }
+    </script>
+</body>
+</html>
